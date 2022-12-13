@@ -17,8 +17,6 @@ public class Test {
     public void test()  {
         UserMapper userMapper=app.getBean("userMapper",UserMapper.class);
         System.out.println(userMapper.getUserById(1));
-
-
     }
     public String pwd(String str)  {
         byte[]bytes=str.getBytes();
