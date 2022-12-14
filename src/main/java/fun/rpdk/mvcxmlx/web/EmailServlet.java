@@ -1,8 +1,6 @@
 package fun.rpdk.mvcxmlx.web;
 
 import fun.rpdk.mvcxmlx.util.Logger;
-import fun.rpdk.mvcxmlx.util.Util;
-import org.apache.ibatis.io.Resources;
 
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
@@ -32,7 +30,7 @@ public class EmailServlet extends HttpServlet {
         String host = null;
         InputStream in = null;
         try {
-            in = Resources.getResourceAsStream("email.properties"); //Resources.getResourceAsStream("email.properties");
+            in = EmailServlet.class.getResourceAsStream("/email.properties");
         } catch (Exception e) {
             Logger.getLogger().error("email init error");
             e.printStackTrace();
